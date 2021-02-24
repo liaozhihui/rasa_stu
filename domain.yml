@@ -1,9 +1,11 @@
 intents:
   - greet
   - HelloWorld
+  - ask_chapter_bible
 actions:
 - utter_greet
 - action_hello_world
+- action_response_ask_bible
 
 templates:
   utter_greet:

@@ -40,8 +40,17 @@ class ActionHelloWorld(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        print("+++++++++++++++++++++++")
         dispatcher.utter_message("Hello World!")
         return []
 
 
+class ActionResponseAskBible(Action):
+
+    def name(self) -> Text:
+        return "action_response_ask_bible"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message("very nice!")
+        return []
