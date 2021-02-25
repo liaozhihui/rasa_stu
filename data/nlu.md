@@ -24,6 +24,8 @@
 - that sounds good
 - correct
 - 是的
+- 正确
+
 - ## intent:goodbye
 - see you
 - good bye

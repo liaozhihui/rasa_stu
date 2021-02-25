@@ -2,7 +2,7 @@
 # https://rasa.com/docs/rasa/nlu/components/
 #language: en
 #pipeline: my_process
-language: en
+language: zh
 pipeline: supervised_embeddings
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/

@@ -52,5 +52,5 @@ class ActionResponseAskBible(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message("very nice!")
+        dispatcher.utter_message("圣经很值得你去看!")
         return []
