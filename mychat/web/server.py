@@ -47,4 +47,4 @@ def forget():
 
 if __name__ == '__main__':
     print("web init success!")
-    app.run('localhost','5150', debug=True)
+    app.run('localhost','5000', debug=True)
