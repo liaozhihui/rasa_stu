@@ -20,9 +20,10 @@ def yield_test():
 
 @xiecheng
 def proxy_gen():
-    while True:
-        vegetables = yield from yield_test()
-        print(f"final elements in foodlist are{vegetables}")
+
+    vegetables = yield from yield_test()
+    print(f"final elements in foodlist are{vegetables}")
+    yield
 
 def main():
     g = proxy_gen()
