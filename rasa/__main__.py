@@ -66,8 +66,9 @@ def main() -> None:
     log_level = (
         cmdline_arguments.loglevel if hasattr(cmdline_arguments, "loglevel") else None
     )
-    set_log_level(log_level)
-
+    # set_log_level(log_level)
+    set_log_level(logging.DEBUG)
+    print(logging.INFO)
     # insert current path in syspath so custom modules are found
     sys.path.insert(1, os.getcwd())
 
