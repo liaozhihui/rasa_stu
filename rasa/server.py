@@ -622,11 +622,11 @@ def create_app(
         dump_obj_as_str_to_file(config_path, rjs["config"])
 
         if "nlu" in rjs:
-            nlu_path = os.path.join(temp_dir, "nlu.md")
+            nlu_path = os.path.join(temp_dir, "old_nlu.md")
             dump_obj_as_str_to_file(nlu_path, rjs["nlu"])
 
         if "stories" in rjs:
-            stories_path = os.path.join(temp_dir, "stories.md")
+            stories_path = os.path.join(temp_dir, "old_stories.md")
             dump_obj_as_str_to_file(stories_path, rjs["stories"])
 
         domain_path = DEFAULT_DOMAIN_PATH
