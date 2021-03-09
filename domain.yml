@@ -13,30 +13,26 @@ slots:
 
 intents:
   - greet
-  - HelloWorld
-  - ask_chapter_bible
+  - confirm
   - goodbye
-  - affirm
+  - thanks
+  - inform
+  - request_management
+  - request_search
   - deny
-  - mood_great
-  - mood_unhappy
+  - unknown_intent
 actions:
-- utter_greet
-- action_hello_world
-- action_response_ask_bible
-- utter_cheer_up
-- utter_did_that_help
-- utter_happy
-- utter_goodbye
-- utter_default
-- utter_thanks
-- utter_ask_morehelp
-- utter_ask_time
-- utter_ask_package
-- utter_ack_management
-- utter_ask_phonenum
-- utter_confirm
-- action_search_consume
+  - utter_greet
+  - utter_goodbye
+  - utter_default
+  - utter_thanks
+  - utter_ask_morehelp
+  - utter_ask_time
+  - utter_ask_package
+  - utter_ack_management
+  - utter_ask_phonenum
+  - utter_confirm
+  - action_search_consume
 
 entities:
   - item
@@ -47,7 +43,10 @@ entities:
 
 templates:
   utter_greet:
-  - text: 嘿！过的怎么样
+  - text: "嘿！过的怎么样"
+  - text: "您好! 我是机器人小贝，很高兴为您服务。"
+  - text: "你好! 我是小贝，可以帮您办理流量套餐，话费查询等业务。"
+  - text: "hi! 我是小贝，有什么可以帮您吗。"
   utter_cheer_up:
   - text: '希望这张图片能让你心情有所好转'
     image: https://i.imgur.com/nGF1K8f.jpg

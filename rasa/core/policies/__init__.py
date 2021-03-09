@@ -13,3 +13,4 @@ from rasa.core.policies.form_policy import FormPolicy
 from rasa.core.policies.two_stage_fallback import TwoStageFallbackPolicy
 from rasa.core.policies.mapping_policy import MappingPolicy
 from rasa.core.policies.fqa import FqaPolicy
+from rasa.core.policies.attention_policy import AttentionPolicy

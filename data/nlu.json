@@ -26,6 +26,17 @@
                         "entity": "item"
                     }
                 ]
+            },{
+                "text": "帮我查一下我还有多少流量呢",
+                "intent": "request_search",
+                "entities": [
+                    {
+                        "start": 10,
+                        "end": 12,
+                        "value": "流量",
+                        "entity": "item"
+                    }
+                ]
             },
             {
                 "text": "帮我查一下我一个月消费多少",

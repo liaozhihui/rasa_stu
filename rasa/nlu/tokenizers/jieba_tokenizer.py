@@ -61,16 +61,19 @@ class JiebaTokenizer(Tokenizer, Component):
     ) -> None:
         for example in training_data.training_examples:
             example.set("tokens", self.tokenize(example.text))
-
+        print("2234222342432")
     def process(self, message: Message, **kwargs: Any) -> None:
         message.set("tokens", self.tokenize(message.text))
 
     @staticmethod
     def tokenize(text: Text) -> List[Token]:
         import jieba
-
+        print("text:",text)
         tokenized = jieba.tokenize(text)
+        for (word,start,end) in tokenized:
+            print(word,",",start,",",end)
         tokens = [Token(word, start) for (word, start, end) in tokenized]
+        print("tokens:", tokens)
         return tokens
 
     @classmethod
