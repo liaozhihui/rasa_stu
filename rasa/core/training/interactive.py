@@ -73,8 +73,8 @@ logger = logging.getLogger(__name__)
 MAX_VISUAL_HISTORY = 3
 
 PATHS = {
-    "stories": "data/stories.md",
-    "nlu": "data/nlu.md",
+    "stories": "data/old_stories.md",
+    "nlu": "data/old_nlu.md",
     "backup": "data/nlu_interactive.md",
     "domain": "domain.yml",
 }
@@ -677,7 +677,7 @@ def _request_export_info() -> Tuple[Text, Text, Text]:
             default=PATHS["stories"],
             validate=io_utils.file_type_validator(
                 [".md"],
-                "Please provide a valid export path for the stories, e.g. 'stories.md'.",
+                "Please provide a valid export path for the stories, e.g. 'old_stories.md'.",
             ),
         ),
         export_nlu=questionary.text(
@@ -686,7 +686,7 @@ def _request_export_info() -> Tuple[Text, Text, Text]:
             default=PATHS["nlu"],
             validate=io_utils.file_type_validator(
                 [".md"],
-                "Please provide a valid export path for the NLU data, e.g. 'nlu.md'.",
+                "Please provide a valid export path for the NLU data, e.g. 'old_nlu.md'.",
             ),
         ),
         export_domain=questionary.text(

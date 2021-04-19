@@ -31,6 +31,10 @@ from rasa.nlu.utils.mitie_utils import MitieNLP
 from rasa.nlu.utils.spacy_utils import SpacyNLP
 from rasa.utils.common import class_from_module_path
 from rasa.nlu.mytest.preprocessing import PreprocessAnalyzer
+from rasa_nlu_gao.extractors.jieba_pseg_extractor import JiebaPsegExtractor
+from rasa_nlu_gao.featurizers.bert_vectors_featurizer import BertVectorsFeaturizer
+from rasa_nlu_gao.classifiers.embedding_bert_intent_classifier import EmbeddingBertIntentClassifier
+
 
 if typing.TYPE_CHECKING:
     from rasa.nlu.components import Component
@@ -67,7 +71,10 @@ component_classes = [
     MitieIntentClassifier,
     KeywordIntentClassifier,
     EmbeddingIntentClassifier,
-    PreprocessAnalyzer
+    PreprocessAnalyzer,
+    JiebaPsegExtractor,
+    BertVectorsFeaturizer,
+    EmbeddingBertIntentClassifier
 ]
 
 # Mapping from a components name to its class to allow name based lookup.
@@ -119,7 +126,13 @@ registered_pipeline_templates = {
         "CountVectorsFeaturizer",
         "EmbeddingIntentClassifier",
     ],
-    "my_process": ["PreprocessAnalyzer"]
+    "my_process": [
+        "WhitespaceTokenizer",
+        "CRFEntityExtractor",
+        "CountVectorsFeaturizer",
+        "EmbeddingIntentClassifier",
+        "SklearnIntentClassifier"
+    ]
 }
 
 

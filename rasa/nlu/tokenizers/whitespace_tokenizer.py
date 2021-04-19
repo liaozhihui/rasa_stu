@@ -30,6 +30,7 @@ class WhitespaceTokenizer(Tokenizer, Component):
             example.set("tokens", self.tokenize(example.text))
 
     def process(self, message: Message, **kwargs: Any) -> None:
+        print("7868686766",message.text,self.tokenize(message.text))
         message.set("tokens", self.tokenize(message.text))
 
     def tokenize(self, text: Text) -> List[Token]:

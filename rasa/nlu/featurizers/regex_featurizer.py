@@ -46,6 +46,7 @@ class RegexFeaturizer(Featurizer):
     def process(self, message: Message, **kwargs: Any) -> None:
 
         updated = self._text_features_with_regex(message)
+        print("Regex_message:",updated)
         message.set("text_features", updated)
 
     def _text_features_with_regex(self, message):
