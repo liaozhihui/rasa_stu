@@ -1,6 +1,14 @@
-from bert_serving.server.helper import get_args_parser
-from bert_serving.server import BertServer
-args = get_args_parser().parse_args(['-model_dir', 'G:/data/chinese_L-12_H-768_A-12'])
+import pdb
 
-server = BertServer(args)
-server.start()
+print(1)
+print(2)
+print(3)
+print(4)
+print(5)
+print(6)
+print(7)
+print(8)
+print(9)
+pdb.set_trace()
+print(10)
+
