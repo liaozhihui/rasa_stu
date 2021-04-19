@@ -202,7 +202,8 @@ class MemoizationPolicy(Policy):
 
         tracker_as_states = self.featurizer.prediction_states([tracker], domain)
         states = tracker_as_states[0]
-        logger.debug("Current tracker state {}".format(states))
+        # logger.debug("Current tracker state {}".format(states))
+        logger.info("Current tracker state {}".format(states))
         recalled = self.recall(states, tracker, domain)
         if recalled is not None:
             logger.debug("There is a memorised next action '{}'".format(recalled))
