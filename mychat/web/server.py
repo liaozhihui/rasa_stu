@@ -1,6 +1,6 @@
 
 from flask import Flask, render_template, request
-
+from mychat.bot.action_agent import ActionAgent,UserMessage
 import requests
 import json
 REQUEST_URL = "http://localhost:5005/webhooks/rest/webhook"
@@ -26,6 +26,12 @@ def Botresponse(sender, meg):
 ########################################
 
 
+def request_handler_message(message):
+    userMessage = UserMessage(message)
+    actionAgent = ActionAgent.load("/home/lzh/PycharmProjects/rasa_stu")
+    # actionAgent.handle_message(userMessage)
+
+
 @app.route('/', methods=['GET', 'POST'])
 def view():
     return render_template('index.html')
@@ -43,6 +49,18 @@ def response():
 @app.route('/forget', methods=['GET'])
 def forget():
     return 'success'
+
+
+@app.route("/action_name",methods = ["POST","GET"])
+def get_action():
+    data = request.args.to_dict()
+    action_name = data.get("action_name")
+    try:
+        request_handler_message(action_name)
+    except Exception as e:
+        print(e)
+    return action_name
+
 
 
 if __name__ == '__main__':
